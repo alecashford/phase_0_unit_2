@@ -46,3 +46,6 @@ end
 # 3. Refactored Solution
 
 # 4. Reflection 
+
+#This one was definitely a challenge for me, which is why I'm glad I paired for it. Bridgette was really good about
+#explaining the different things that were going on behind the scenes of the code. I especially found helpful her explanation of the syntax classes, which is something that I did not find compeltely intuitive at first.
