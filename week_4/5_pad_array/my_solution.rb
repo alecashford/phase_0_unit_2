@@ -4,7 +4,7 @@
 # include it in this file. Also make sure everything that isn't code
 # is commented in the file.  
 
-# I worked on this challenge [by myself, with: Alec Ashford ].
+# I worked on this challenge with Bridgette S.
 
 # 1. Pseudocode
 
@@ -45,24 +45,5 @@ end
 
 
 # 3. Refactored Solution
-
-class Array
-  def pad!(min_size, value=nil)
-    x = min_size - self.count 
-    x.times do 
-      self << value 
-    end
-    return self
-  end
-    
-  def pad(min_size, value=nil)
-    copy = self.clone
-    x = min_size - self.count 
-    x.times do 
-      copy << value
-    end
-    return copy
-  end
-end
 
 # 4. Reflection 
