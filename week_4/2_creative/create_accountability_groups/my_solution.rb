@@ -17,16 +17,16 @@ def loopy(unitnum)
     end
 end
 
-#Method that pushes first element of one array and places it at end of next array (for later use)
+#Method that pushes a regular number of elements of one array and places it at end of next array (for later use)
 def switchup
     $g2.push($g1[0])
     $g1.delete($g1[0])
-    $g3.push($g2[0])
-    $g2.delete($g2[0])
-    $g4.push($g3[0])
-    $g3.delete($g3[0])
-    $g1.push($g4[0])
-    $g4.delete($g4[0])
+    $g3.push($g2[0]..$g2[1])
+    $g2.delete($g2[0]..$g2[1])
+    $g4.push($g3[0]..$g3[2])
+    $g3.delete($g3[0]..$g3[2])
+    $g1.push($g4[0]..$g4[3])
+    $g4.delete($g4[0]..$g4[3])
 end
 
 
@@ -36,3 +36,15 @@ switchup
 loopy(2)
 switchup
 loopy(3)
+
+
+#This was a difficult challenge for me mostly because it took a while for me
+#to devise an effective method to divide up people so that no group would ever
+#be the same, and so that no student would ever be with the same people twice.
+#The key insight, for me, was to split them up into four arrays and use their
+#position within the arrays to generate the groups. By shifting the position of
+#each person just one over in the arrays, you could ensure complete randomness
+#between the groups without actually being random: it is a methodical method to
+#ensure diversity. I found this challenge technically challenging since I had to
+#learn a lot of the most important concepts along the way. For example, I did not
+#understand the purpose of the $ in ruby until I complete this challenge.
