@@ -32,7 +32,6 @@ class Array
     end
     return self
   end
-    
   def pad(min_size, value=nil)
     copy = self.clone
     x = min_size - self.count 
