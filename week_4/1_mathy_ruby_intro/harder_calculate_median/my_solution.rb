@@ -1,5 +1,5 @@
-def median(arr)
-    arr = arr.sort
+def my_solution(arr)
+    arr.sort
     if arr.length % 2 != 0
         return arr[arr.length / 2.0]
     else
@@ -7,8 +7,9 @@ def median(arr)
     end     
 end
 
-
-#I found this challenge fairly easy, as I have done similar stuff in other languages and recently in javascript,
-#so the fundamentals of the challenge were the same, the only differences were working with floating points and
-#not integers. I didn't really learn much on this challenge, but it helps just to work like this in ruby, as I
-#am still getting used to the syntax.
+#This was a somewhat harder challenge, but was still fairly easy conceptually
+#because we have done the same challenge just in a different language (javascript).
+#Because of this, I did not find it too difficult to figure out how to transfer that
+#concept into ruby, the only difference between the challenges was forcing floating
+#point numbers instead of integers. It was also an important learning opportunity
+#to use rspec, which I didn't fully understand until I used it for this challenge.
