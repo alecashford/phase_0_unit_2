@@ -114,3 +114,13 @@ fork2 = silverware_drawer.remove_item(fork2)
 p fork2.type == "fork2"
 
 # 5. Reflection 
+
+
+=begin
+
+I enjoyed woring on this challenge with Danny. We worked together and I found that we made a prety good team. There was mutual
+respect and I found that we were both at more or less the same leel technically, so we offered different perspectives on
+the issue than the other had. The exerise was a good pairing challenge because it offered so many parts to work on.
+By the ened I 
+
+
