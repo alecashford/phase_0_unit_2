@@ -1,40 +1,36 @@
-# U2.W6: Create a BoggleBoard Class
+$dice_grid = [["b", "r", "a", "e"],
+                ["i", "o", "d", "t"],
+                ["e", "c", "l", "r"],
+                ["t", "a", "k", "e"]]
 
 
-# I worked on this challenge [by myself, with: ].
-
-
-# 2. Pseudocode
-
-
-
-# 3. Initial Solution
-class BoggleBoard
- 
-  #your code here
- 
+class Boggle_board
+    def initialize(board)
+        @board = board
+    end
+    
+    def create_word(board, *coords)
+        coords.map { |coord| @board[coord.first][coord.last]}.join("")
+    end
+    def get_row(row)
+        @board[row]
+    end
+    def get_col(col)
+        $list = []
+        for i in 0...@board.length
+            $list.push(@board[i][col])
+        end
+      return $list
+    end
 end
- 
- 
-dice_grid = [["b", "r", "a", "e"],
-             ["i", "o", "d", "t"],
-             ["e", "c", "l", "r"],
-             ["t", "a", "k", "e"]]
- 
-boggle_board = BoggleBoard.new(dice_grid)
- 
 
 
-# 4. Refactored Solution
-
-
-
-
-
-
-# 1. DRIVER TESTS GO BELOW THIS LINE
-# create driver test code to retrieve a value at a coordinate here:
-# implement tests for each of the methods here:
-
-
-# 5. Reflection 
+=begin
+	
+I actually found this challenge exceedingly simple. I already like
+working with classes and objects so this was not difficult to do for me.
+I prefer object oriented programming as oposed ot procedural because it
+allows you to come up with cleverer solutions to the problems you face.
+I can't really say I learned anything new, although I can safely
+say that every bit of practice I can get that reinforces my knowledge
+of class syntax in ruby is very beneficial.
