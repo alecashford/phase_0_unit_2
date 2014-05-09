@@ -1,55 +1,40 @@
-# U2.W6: PezDispenser Class from User Stories
-
-
-# I worked on this challenge [by myself, with: ].
-
-# 1. Review the following user stories:
-# - As a pez user, I'd like to be able to "create" a new pez dispenser with a group of flavors that 
-#      represent pez so it's easy to start with a full pez dispenser.
-# - As a pez user, I'd like to be able to easily count the number of pez remaining in a dispenser 
-#      so I can know how many are left.
-# - As a pez user, I'd like to be able to take a pez from the dispenser so I can eat it.
-# - As a pez user, I'd like to be able to add a pez to the dispenser so I can save a flavor for later.
-# - As a pez user, I'd like to be able to see all the flavors inside the dispenser so I know the order 
-#      of the flavors coming up.
-
-
-# 2. Pseudocode
-
-
-
-# 3. Initial Solution
-
 class PezDispenser
- 
-# your code here!
- 
+    def initialize()
+        @mag = random_flavor()
+    end
+    def dispense
+        if @mag.length > 0
+            puts @mag[@mag.length - 1]
+            @mag.delete_at(@mag.length - 1)
+        else
+            puts "The pez dispenser is empty :("
+        end
+    end
+    def add_pez(new_pez)
+        if @mag.length < 12
+            @mag.push(new_pez)
+        else
+            puts "The pez dispenser is already full! :)"
+        end
+    end
+    def random_flavor
+        flavors = ["lime", "cherry", "grape", "orange"]
+        return [flavors[rand(4)]] * 12
+    end
+    def count_pez
+        return @mag.length
+    end
+    def cheat
+        return @mag
+    end
 end
- 
 
-
-# 4. Refactored Solution
-
-
-
-
-
-
-# 1. DRIVER TESTS GO BELOW THIS LINE
-
-flavors = %w(cherry chocolate cola grape lemon orange peppermint raspberry strawberry).shuffle
-super_mario = PezDispenser.new(flavors)
-puts "A new pez dispenser has been created. You have #{super_mario.pez_count} pez!"  
-puts "Here's a look inside the dispenser:"  
-puts super_mario.see_all_pez 
-puts "Adding a purple pez."
-super_mario.add_pez("purple")   # mmmmm, purple flavor
-puts "Now you have #{super_mario.pez_count} pez!"
-puts "Oh, you want one do you?"
-puts "The pez flavor you got is: #{super_mario.get_pez}"
-puts "Now you have #{super_mario.pez_count} pez!"
-
-
-
-
-# 5. Reflection 
+=begin
+I enjoyed this problem. The parts of it that I found difficult were not
+conceptual in nature, as i understood the creation of the class and
+the concepts of it pretty well, the part I found challenging was the
+different ways of adding and taking away from an array. Ultimately I
+chose to add to the end of the array, which serves the same function,
+but I had initially wanted to take from the beginning. It really makes
+no difference, but that was my only problem.
+=end
